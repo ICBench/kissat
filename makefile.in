@@ -78,6 +78,6 @@ libkissat.a: $(LIBOBJ) makefile
 	$(AR) rc $@ $(LIBOBJ)
 
 libkissat.so: $(LIBOBJ) makefile
-	$(LD) -shared -o $@ $(LIBOBJ)
+	$(LD) -shared -o $@ $(LIBOBJ) -lm
 
 .PHONY: all clean coverage indent test build.h
